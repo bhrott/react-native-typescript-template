@@ -7,13 +7,16 @@ import React from 'react'
 import { Component } from 'react'
 import { StyleSheet, View } from 'react-native'
 
-import { MyPage } from './src/ui/pages'
+import { RootRouter } from './src/ui/router'
+import { NavigationService } from './src/ui/services'
 
 type Props = {}
 export default class App extends Component<Props> {
 	render() {
 		return (
-			<MyPage />
+			<RootRouter ref={(navigatorRef: any) => {
+				NavigationService.useNavigator(navigatorRef)
+			}} />
 		)
 	}
 }
