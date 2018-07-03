@@ -7,15 +7,13 @@ import React from 'react'
 import { Component } from 'react'
 import { StyleSheet, View } from 'react-native'
 
-import { Hello } from './src/Hello'
+import { MyPage } from './src/ui/pages'
 
 type Props = {}
 export default class App extends Component<Props> {
 	render() {
 		return (
-			<View style={styles.container}>
-				<Hello name={'Ben'} enthusiasmLevel={1} />
-			</View>
+			<MyPage />
 		)
 	}
 }
